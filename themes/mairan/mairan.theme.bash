@@ -109,7 +109,7 @@ prompt() {
 
     if [ -n "$VIRTUAL_ENV" ]
     then
-        ve=`basename $VIRTUAL_ENV`;
+        ve=`basename "$VIRTUAL_ENV"`;
     fi
 
     # nice prompt
@@ -127,4 +127,4 @@ PS2="└─▪ "
 
 
 
-PROMPT_COMMAND=prompt
+safe_append_prompt_command prompt
